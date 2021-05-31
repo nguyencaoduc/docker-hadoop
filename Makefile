@@ -18,3 +18,9 @@ wordcount:
 	docker run --network ${DOCKER_NETWORK} --env-file ${ENV_FILE} hadoop_base:$(current_branch) hdfs dfs -cat /output/*
 	docker run --network ${DOCKER_NETWORK} --env-file ${ENV_FILE} hadoop_base:$(current_branch) hdfs dfs -rm -r /output
 	docker run --network ${DOCKER_NETWORK} --env-file ${ENV_FILE} hadoop_base:$(current_branch) hdfs dfs -rm -r /input
+
+start:
+	docker compose up
+
+stop:
+	docker compose down
