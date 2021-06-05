@@ -1,4 +1,5 @@
-FROM hadoop-base:2.0.0-hadoop2.7.4-java8
+ARG TAG
+FROM hadoop-base:${TAG}
 
 HEALTHCHECK CMD curl -f http://localhost:8188/ || exit 1
 
